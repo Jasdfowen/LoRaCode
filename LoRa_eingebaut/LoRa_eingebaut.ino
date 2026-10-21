@@ -110,7 +110,7 @@ void setup() {
   Wire.begin(SDA_PIN, SCL_PIN);            // I2C mit expliziten Pins starten
   Wire.setClock(I2C_SPEED);                // I2C-Geschwindigkeit setzen (100 kHz)
   mcp.begin(0x67, &Wire);                  // MCP9600 am I2C-Addr 0x67 initialisieren (ggf. 0x66)
-  mcp.setThermocoupleType(MCP9600_TYPE_J); // Thermoelement-Typ konfigurieren (hier: Typ J)
+  mcp.setThermocoupleType(MCP9600_TYPE_K); // Thermoelement-Typ konfigurieren (hier: Typ J)
   mcp.setFilterCoefficient(3);             // Digitalfilter (0–7): Glättung vs. Reaktionszeit
   mcp.setADCresolution(MCP9600_ADCRESOLUTION_14);  // 14-bit ADC-Auflösung (0,25 °C, schnelle Wandlung)
   mcp.setAmbientResolution(RES_ZERO_POINT_25);     // Ambient-Auflösung auf 0,25 °C
